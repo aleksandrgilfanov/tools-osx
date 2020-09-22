@@ -1,0 +1,17 @@
+launchd is service management framework for starting, stopping and managing
+daemons, applications, processes, and scripts
+
+Daemon runs on behalf of the root.
+Agent runs on behalf of the logged user.
+
+To enable autostart for logged user put plist in ~/Library/LaunchAgents
+
+To load job manually:
+launchctl load ~/job.plist
+launchctl unload ~/job.plist
+
+To start loaded job:
+launchctl start ~/job.plist
+
+Note: load does not mean start.
+Note: load can start automatically when key RunAtLoad exists in plist.
